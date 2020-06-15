@@ -26,10 +26,12 @@ def nyc_pigeon_organizer(data)
     values.each do |value, array|
       #iterate over each element in array
       array.each do |name|
+        #create a new hash for color, gender and lives
         new_hash[name] = {:color => [], :gender => [], :lives => []}
       end
     end
   end
+
   x = new_hash.keys
   data[:color].each do |bird_color, name|
     name.each do |bird_name|
@@ -40,7 +42,7 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  data[gender] do |gender, type|
+  data[:gender] do |gender, type|
     type.each do |bird_name|
       x.each do |item|
         if bird_name == item
