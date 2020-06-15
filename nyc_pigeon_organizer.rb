@@ -43,7 +43,7 @@ def nyc_pigeon_organizer(data)
     end
   end
   #gender hash
-  data[:gender] do |gender, type|
+  data[:gender].each do |gender, type|
     type.each do |bird_name|
       x.each do |item|
         if bird_name == item
